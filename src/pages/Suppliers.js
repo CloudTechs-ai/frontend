@@ -22,7 +22,7 @@ export default function Suppliers() {
             <TableHead>
               <TableRow sx={{ bgcolor:'primary.main' }}>
                 <TableCell sx={{ color:'white', fontWeight:700 }}>ID</TableCell>
-                <TableCell sx={{color:"white",fontWeight:700}}>Suppliercode</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Companyname</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Contactperson</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Email</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Phone</TableCell>
+                <TableCell sx={{color:"white",fontWeight:700}}>Supplier Code</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Company Name</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Contact Person</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Email</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Phone</TableCell>
                 <TableCell sx={{ color:'white', fontWeight:700 }}>Status</TableCell>
               </TableRow>
             </TableHead>
