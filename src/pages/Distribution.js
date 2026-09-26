@@ -22,7 +22,7 @@ export default function Distribution() {
             <TableHead>
               <TableRow sx={{ bgcolor:'primary.main' }}>
                 <TableCell sx={{ color:'white', fontWeight:700 }}>ID</TableCell>
-                <TableCell sx={{color:"white",fontWeight:700}}>Shipmentnumber</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Destination</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Carrier</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Dispatchdate</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Estimatedarrival</TableCell>
+                <TableCell sx={{color:"white",fontWeight:700}}>Shipment Number</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Destination</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Carrier</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Dispatch Date</TableCell><TableCell sx={{color:"white",fontWeight:700}}>Estimated Arrival</TableCell>
                 <TableCell sx={{ color:'white', fontWeight:700 }}>Status</TableCell>
               </TableRow>
             </TableHead>
