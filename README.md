@@ -1,11 +1,11 @@
-## zen-pharma-frontend
+## med-pharma-frontend
 
 React 18 frontend for the Zen Pharma platform. Served via Nginx inside a Docker container and deployed to AWS EKS via GitOps (ArgoCD).
 
 > **Companion repos:**
-> - [`zen-infra`](https://github.com/your-github-username/zen-infra) — Terraform for AWS infrastructure (EKS, RDS, ECR, IAM)
-> - [`zen-pharma-backend`](https://github.com/your-github-username/zen-pharma-backend) — Spring Boot microservices
-> - [`zen-gitops`](https://github.com/your-github-username/zen-gitops) — ArgoCD apps + Helm values
+> - [`med-infra`](https://github.com/your-github-username/med-infra) — Terraform for AWS infrastructure (EKS, RDS, ECR, IAM)
+> - [`med-pharma-backend`](https://github.com/your-github-username/med-pharma-backend) — Spring Boot microservices
+> - [`med-gitops`](https://github.com/your-github-username/med-gitops) — ArgoCD apps + Helm values
 
 ---
 
@@ -100,7 +100,7 @@ docker run -p 80:80 pharma-ui:local
 | `AUTH_BASE_URL` | Auth service base path | `/api/auth` |
 | `ENV` | Environment name | `dev`, `qa`, `prod` |
 
-These are injected via the `configmap:` section in `zen-gitops/envs/<env>/values-pharma-ui.yaml` and mounted as a ConfigMap in Kubernetes.
+These are injected via the `configmap:` section in `med-gitops/envs/<env>/values-pharma-ui.yaml` and mounted as a ConfigMap in Kubernetes.
 
 ---
 
@@ -123,9 +123,6 @@ The `ci.yml` workflow triggers on push to `develop` or `main`:
 ```
 
 **Authentication to AWS:** GitHub OIDC — no `AWS_ACCESS_KEY_ID` stored as a secret.
-
-See [`zen-infra/docs/CICD-IMPLEMENTATION.md`](https://github.com/your-github-username/zen-infra/blob/main/docs/CICD-IMPLEMENTATION.md) for full architecture details.
-
 ---
 
 ## Required GitHub Secrets
@@ -149,5 +146,3 @@ Set in **Settings → Secrets and variables → Actions**:
 The frontend is deployed as `pharma-ui` via the shared Helm chart in `zen-gitops/helm-charts/`. Nginx configuration and writable volume mounts (required by `readOnlyRootFilesystem: true`) are managed via the Helm values file.
 
 Ingress routes `/` to the `pharma-ui` service. All `/api/*` requests are routed by Nginx to the backend api-gateway.
-
-See [`zen-infra/docs/FULL-DEPLOYMENT-GUIDE.md`](https://github.com/your-github-username/zen-infra/blob/main/docs/FULL-DEPLOYMENT-GUIDE.md) for the complete 4-stage deployment guide.
